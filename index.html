@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/styles/output.css" />
+
+    <title>Todo App by Emmanuel Obi</title>
+  </head>
+  <body class="w-full h-screen m-0 p-0 flex justify-between items-center">
+    <div
+      id="left-container"
+      class="w-full h-full relative drop-shadow-2xl shadow-2xl"
+    >
+      <!-- Top user box -->
+      <div
+        id="userbox"
+        class="w-full flex justify-start items-start px-10 py-6 drop-shadow-2xl bg-primary min-h-36"
+      >
+        <img src="./src/assets/images/face.svg" alt="user icon" />
+        <div class="ml-8 flex flex-col justify-center items-start">
+          <h4 id="username" class="text-white font-medium text-base">
+            Hello there,
+          </h4>
+          <p class="italic font-extralight text-white text-2xl max-w-60">
+            What are your plans for today?
+          </p>
+        </div>
+      </div>
+
+      <!-- Todo list -->
+      <div
+        id="todo-list"
+        class="flex-grow w-full lg:w-5/6 mx-auto flex flex-col lg:flex-row justify-between items-center gap-1 py-12 max-h-[calc(100vh-150px)] lg:flex-wrap overflow-y-scroll"
+      ></div>
+      <button
+        id="add-icon"
+        class="absolute cursor-pointer bottom-3 right-3 lg:bottom-10 lg:right-10 bg-primary border-1 border-add-border w-16 h-16 flex justify-center items-center rounded-full"
+      >
+        <img src="./src/assets/images/add.svg" alt="add icon" />
+      </button>
+    </div>
+    <div
+      id="right-container"
+      class="w-full hidden flex-grow transition h-full relative"
+    >
+      <h3
+        id="form-header"
+        class="drop-shadow-2xl font-medium text-2xl text-white w-full flex justify-center items-center px-10 py-6 bg-primary min-h-36"
+      ></h3>
+      <div class="w-full flex flex-col items-start justify-start py-6 px-10">
+        <label class="text-black font-normal text-base mb-4"> Todo Title</label>
+
+        <input
+          type="text"
+          name="todo"
+          id="todo"
+          placeholder="Enter New Todo..."
+          class="bg-white border-1 border-input-border w-full py-2 px-6 h-12 rounded-lg text-deep-blue text-lg"
+        />
+      </div>
+
+      <div
+        class="flex absolute bottom-10 justify-between items-center w-full px-10"
+      >
+        <button
+          onclick="hideForm()"
+          class="w-2/6 lg:w-1/6 bg-delete border-1 h-14 rounded-lg text-white font-normal text-base border-delete-border"
+        >
+          Cancel
+        </button>
+        <button
+          id="save-todo"
+          class="w-3/6 lg:w-4/6 bg-primary border-1 h-14 rounded-lg text-white font-normal text-base border-primary-border"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

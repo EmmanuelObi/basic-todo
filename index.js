@@ -120,6 +120,11 @@ function setTodoComplete(id) {
 function editTodo() {
   const todoText = document.getElementById("todo").value;
 
+  if (todoText === "") {
+    alert("No task entered");
+    return;
+  }
+
   let checkingExistence = allTodos.find((item) => item.text === todoText);
 
   if (checkingExistence) {
@@ -156,6 +161,12 @@ function saveTodo() {
     return;
   }
   const todo = document.getElementById("todo").value;
+
+  if (todo === "") {
+    alert("No task entered");
+
+    return;
+  }
 
   let checkingExistence = allTodos.find((item) => item.text === todo);
 

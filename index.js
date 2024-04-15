@@ -17,6 +17,7 @@ saveButton.addEventListener("click", saveTodo);
 
 addTodoButton.addEventListener("click", clickAddTodo);
 
+// Event listener for Enter key
 document.getElementById("todo").addEventListener("keydown", function (e) {
   if (e.code === "Enter") {
     if (formHeader.textContent === "Edit Todo") {

@@ -228,6 +228,7 @@ function showForm() {
 }
 
 function hideForm() {
+  document.getElementById("todo").value = "";
   if (displayRightContainer.classList.contains("block")) {
     displayLeftContainer.classList.remove(
       "hidden",

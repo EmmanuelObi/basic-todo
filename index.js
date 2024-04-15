@@ -44,7 +44,12 @@ function displayTodos() {
       "items-center",
       "min-h-28"
     );
-    emptySlot.innerHTML = `<p class="min-h-48 pt-16">No plans set for today</p>`;
+    emptySlot.innerHTML = `
+      <div class="flex flex-col mt-16 justify-center items-center">
+        <img class="w-[calc(80%)]" src="../src/assets/images/empty.png" alt="empty" />
+        <p class="min-h-48 pt-16">No plans set for today</p>
+      </div>
+    `;
 
     todoList.appendChild(emptySlot);
 
